@@ -26,3 +26,11 @@ export interface Post{
     updated_at: any;
 
 }
+
+export interface NewPost{
+
+    task: any;
+    importance: any;
+    deadline: any;
+
+}
