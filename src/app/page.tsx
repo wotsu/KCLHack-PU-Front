@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import {Post} from "./data_type"
+import Link from "next/link"
 
 export default function Home() {
 
@@ -31,6 +32,8 @@ export default function Home() {
   return (
 
     <>
+
+      <Link href="/login">ログイン</Link>
 
       <h1>みんなのやること</h1>
       <button onClick={fetchPosts}>投稿されたポストの更新</button>
