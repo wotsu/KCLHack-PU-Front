@@ -84,7 +84,7 @@ export default function LoginForm() {
 
     <button onClick={userLogin}>ログイン</button>
 
-    <Link href="">新しくアカウントを作成する方はこちらをクリック</Link>
+    <Link href="/new_user">新しくアカウントを作成する方はこちらをクリック</Link>
     <Link href="/">投稿一覧ページに戻る</Link>
     </>
 
