@@ -34,6 +34,7 @@ export default function Home() {
     <>
 
       <Link href="/login">ログイン</Link>
+      <Link href="/new_post">新規投稿作成</Link>
 
       <h1>みんなのやること</h1>
       <button onClick={fetchPosts}>投稿されたポストの更新</button>
