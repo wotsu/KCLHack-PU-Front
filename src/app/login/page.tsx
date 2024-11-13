@@ -56,6 +56,7 @@ export default function LoginForm() {
                 router.push('/');
             }else{
                 console.error(response.statusText, data.message);
+                alert("ログインに失敗しました\nユーザー名またはパスワードが間違えています");
             }
 
         }catch(error){
