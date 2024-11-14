@@ -4,9 +4,6 @@ import { useState } from "react"
 import { LoginUser } from "../data_type"
 import { useRouter } from "next/navigation";
 
-// やること
-// 新規ユーザーの作成
-
 export default function CreateUserForm() {
 
     const router = useRouter();
