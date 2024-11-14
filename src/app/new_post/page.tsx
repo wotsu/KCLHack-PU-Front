@@ -24,7 +24,12 @@ export default function NewPostForm() {
     const submitPost = async() => {
 
         if(content.task===""){
-            alert("テキストが空です");
+            alert("やることを入力してください");
+            return;
+        }
+
+        if(content.deadline===""){
+            alert("締め切りを入力してください");
             return;
         }
 
