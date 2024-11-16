@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {Post} from "./data_type"
 import Link from "next/link"
 
@@ -28,6 +28,10 @@ export default function Home() {
     }
   
   }
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   return (
 
