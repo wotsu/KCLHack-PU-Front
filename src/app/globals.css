@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #f4f4f4;
   --foreground: #171717;
 }
 
@@ -20,8 +20,9 @@ body {
 header {
   position: fixed;
   width: 100%;
-  background: #f4f4f4;
+  background: #ffffff;
   height: 90px;
+  z-index: 1;
   box-shadow: 0px 1px #bebebe;
 }
 
@@ -128,19 +129,143 @@ li {
 	padding: 1rem 2rem;
 	font-weight: bold;
 	border: 2px solid #27acd9;
-	background: #27acd9;
-	color: #fff;
+	background: #ffffff;
+	color: #27acd9;
 	border-radius: 100vh;
 	transition: 0.5s;
 }
 
 .login-button:hover{
-  color: #27acd9;
-	background: #fff;
+  color: #ffffff;
+	background: #27acd9;
 }
 
 .children{
-  padding-top: 100px;
+  padding-top: 110px;
+  padding-left: 20px;
+}
+
+.post-field {
+  background-color: #ffffff;
+  width: 800px;
+  min-height: 800px;
+  border-radius: 20px;
+  overflow-x: hidden;
+}
+
+.post {
+  width: 760px;
+  padding: 20px;
+  border-bottom: 1px solid #bebebe;
+}
+
+.post-username {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.post-task {
+  font-size: 25px;
+  display: inline;
+  overflow-wrap: break-word;
+}
+
+.post-importance {
+  font-size: 20px;
+  display: inline;
+  position:sticky;
+  left: 700px;
+}
+
+.newpost-field{
+  background-color: #ffffff;
+  position: fixed;
+  top: 110px;
+  left: 850px;
+  width: 350px;
+  height: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  overflow-x: hidden;
+}
+
+label {
+  font-size: 30px;
+  border-left: 5px solid #27acd9;
+  padding-left: 5px;
+}
+
+.task-textbox {
+  font-size: 20px;
+  display: block;
+  width: 330px;
+  height: 3rem;
+  margin-bottom: 30px;
+}
+
+.importance-textbox {
+  font-size: 20px;
+  display: block;
+  width: 330px;
+  height: 2rem;
+  margin-bottom: 30px;
+}
+
+.deadline-textbox {
+  font-size: 20px;
+  display: block;
+  width: 330px;
+  height: 2rem;
+  margin-bottom: 50px;
+}
+
+.post-button {
+  font-size: 20px;
+  text-align: center;
+	text-decoration: none;
+	width: 120px;
+  margin: auto;
+	padding: 1rem 1rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #ffffff;
+	color: #27acd9;
+	border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.post-button:hover {
+  color: #ffffff;
+	background: #27acd9;
+}
+
+.reload-button {
+  text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 20px;
+  left: 1000px;
+	width: 20px;
+  height: 20px;
+	padding: 1rem 1rem;
+  font-size: 50px;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #ffffff;
+	color: #27acd9;
+	border-radius: 50%;
+	transition: 0.5s;
+  z-index: 2;
+}
+
+.reload-button:hover {
+  color: #ffffff;
+	background: #27acd9;
 }
 
 * {
