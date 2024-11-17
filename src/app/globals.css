@@ -261,6 +261,7 @@ label {
 	border-radius: 50%;
 	transition: 0.5s;
   z-index: 2;
+  cursor: pointer;
 }
 
 .reload-button:hover {
