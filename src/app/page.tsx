@@ -36,6 +36,7 @@ export default function Home() {
       console.log(response);
       const data = await response.json();
       console.log("API response", data);
+      setPosts(data);
       
     } catch (error) {
       console.log(error);
