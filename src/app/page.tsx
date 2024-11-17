@@ -29,27 +29,17 @@ export default function Home() {
     try {
       console.log("データ取得中");
       const response = await fetch(
-        "http://localhost:8080/auth/get/posts", {
+        "http://localhost:8080/get/posts", {
           mode: "cors",
-          headers: {
-            "Content-Type": "application/json", 
-            "Authorization": `Bearer ${token || ""}`
-          }, 
         }
       );
       console.log(response);
       const data = await response.json();
       console.log("API response", data);
-      if(Array.isArray(data)){
-        setPosts(data);
-        return data;
-      } else {
-        router.push("/login");
-      }
+      
     } catch (error) {
       console.log(error);
       console.log("データ取得エラー");
-      router.push("/login");
     }
   }
 
