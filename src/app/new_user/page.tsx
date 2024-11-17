@@ -61,25 +61,28 @@ export default function CreateUserForm() {
   return (
 
     <>
+    <div className="login-field">
+        <h1>サインアップ</h1>
+        <br></br>
+        <label>ユーザー名</label>
+        <input
+            className="user-name"
+            type="text"
+            value={content.name}
+            onChange={(e) => setContent({...content, name: e.target.value})}
+            placeholder="ユーザー名を入力してください"
+        />
+        <label>パスワード</label>
+        <input
+            className="password"
+            type="text"
+            value={content.password}
+            onChange={(e) => setContent({...content, password: e.target.value})}
+            placeholder="パスワードを入力してください"
+        />
 
-    <h1>新規ユーザー作成ページ</h1>
-
-    <input
-        type="text"
-        value={content.name}
-        onChange={(e) => setContent({...content, name: e.target.value})}
-        placeholder="ユーザー名を入力してください"
-    />
-    <input
-        type="text"
-        value={content.password}
-        onChange={(e) => setContent({...content, password: e.target.value})}
-        placeholder="パスワードを入力してください"
-    />
-
-    <button onClick={createUser}>ユーザーを作成する</button>
-
-    <Link href="/">投稿一覧ページに戻る</Link>
+        <div className="login-button2" onClick={createUser}>サインアップ</div>
+    </div>
     </>
 
   )

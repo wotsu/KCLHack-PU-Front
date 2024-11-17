@@ -88,9 +88,9 @@ export default function LoginForm() {
             placeholder="パスワードを入力してください"
         />
 
-        <button onClick={userLogin}>ログイン</button>
+        <div className="login-button2" onClick={userLogin}>ログイン</div>
 
-        <Link href="/new_user">新しくアカウントを作成する方はこちらをクリック</Link>
+        <Link href="/new_user" className="signup">サインアップはこちらから</Link>
     </div>
     </>
 
