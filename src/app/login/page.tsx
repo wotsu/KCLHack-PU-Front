@@ -2,7 +2,8 @@
 import Link from "next/link"
 import { useState } from "react"
 import { LoginUser } from "../data_type"
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
+import "../globals.css"
 
 // やること
 // 新規ユーザーの作成
@@ -67,26 +68,30 @@ export default function LoginForm() {
   return (
 
     <>
+    <div className="login-field">
+        <h1>ログイン</h1>
+        <br></br>
+        <label>ユーザー名</label>
+        <input
+            className="user-name"
+            type="text"
+            value={content.name}
+            onChange={(e) => setContent({...content, name: e.target.value})}
+            placeholder="ユーザー名を入力してください"
+        />
+        <label>パスワード</label>
+        <input
+            className="password"
+            type="text"
+            value={content.password}
+            onChange={(e) => setContent({...content, password: e.target.value})}
+            placeholder="パスワードを入力してください"
+        />
 
-    <h1>ログインページ</h1>
+        <button onClick={userLogin}>ログイン</button>
 
-    <input
-        type="text"
-        value={content.name}
-        onChange={(e) => setContent({...content, name: e.target.value})}
-        placeholder="ユーザー名を入力してください"
-    />
-    <input
-        type="text"
-        value={content.password}
-        onChange={(e) => setContent({...content, password: e.target.value})}
-        placeholder="パスワードを入力してください"
-    />
-
-    <button onClick={userLogin}>ログイン</button>
-
-    <Link href="/new_user">新しくアカウントを作成する方はこちらをクリック</Link>
-    <Link href="/">投稿一覧ページに戻る</Link>
+        <Link href="/new_user">新しくアカウントを作成する方はこちらをクリック</Link>
+    </div>
     </>
 
   )
